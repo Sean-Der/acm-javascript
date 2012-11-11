@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"> </script>
+		<style>
+			#fancyDiv{
+				background-color: blue;	
+				height: 15em;
+				width: 15em;
+			}
+		</style>
+
+		<script>
+	
+		/* Simple Javascript function*/
+		function helloWorld(){
+			$("#myTxt").text("Hello, World!");
+		}
+
+
+		/* Simple jQuery event listener */
+		$(document).ready(function() {
+			//Make sure to note the bind of #helloWordButton	
+			$("body").on("click", "#helloWorldButton",function(){
+				// Also make sure to note the 3rd argument function()
+		   		// This is an lambda/'anonymous function'
+				alert('hello World');
+			});
+			
+			$("body").on("click", "#fancyDiv",function(){
+				//Make sure to note the object oriented construct "this"
+				$(this).hide("slow");
+			});
+
+			$("body").on("click", "#fireAjax",function(){
+				//Note the URL we are fetching from and how we define the settings off a Ajax function
+				//Also note the value of 'success:' is a lamda	
+				$.ajax({
+					cache: false,
+					url: 'ajax.json',
+					success: function(data) {
+						$.each(data, function(key, val){
+							alert(key + ':' + val);
+						});
+					}
+				});
+			});
+		});
+		</script>
+	</head>
+
+	<body>
+		<h1> View the source Luke! </h1>
+		<div>	
+			<!-- Run  helloWorld() in Firebug to fill this element --!>
+			<p id='myTxt' class='redBorder' /> </p>
+		</div>
+	
+		<div>	
+			<!-- Here we tie the Javascript function in as a tag to an element --!>
+			<button onClick="alert('hello, world');">In Line Demo</button>
+		</div>
+		
+		<div>
+			<!-- Here we remove the Javascript from the HTML, and tie an event listener by Id --!>
+			<button id='helloWorldButton'>Event Listener Demo </button>
+		</div>
+		
+		<!-- Look at line 29 for an example of object oriented JS --!>
+		<div id="fancyDiv"> </div>
+
+		<div>
+			<!-- Click button to fire an Ajax function --!>
+			<button id='fireAjax'>Fire Ajax </button>
+		</div>
+	</body>
+</html>

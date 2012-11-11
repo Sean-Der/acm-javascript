@@ -1,0 +1,112 @@
+<!doctype html>
+
+<!-- READ THE SOURCE LUKE --!>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Javascript - Misunderstood | by Sean DuBois</title>
+    
+    <meta name="description" content="A short presentation to help support a short talk on Javascript." />
+    <meta name="author" content="Sean DuBois" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/acm.css" rel="stylesheet" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+
+<!-- Presentation start --!>
+
+<div id="impress">
+
+    <div id="intro" class="step slide" data-x="-1000" data-y="-2000">
+		<q>Slides at <a href='http://acm.sioBuD.com'>acm.sioBuD.com</a></q>
+		<q>GitHub at <a href='http://github.com/sean-der'>github.com/sean-der</a></q>
+		<q>No Twitter or Facebook!</q>
+	</div>
+
+    <div id="tech_used" class="step slide" data-x="0" data-y="-2000">
+		<h1>Shoulders I  Stand On</h1>
+		<ul>
+			<li class="tech_used_li"><b>Debian GNU/Linux </li>
+			<li class="tech_used_li">Apache 2.2 </li>
+			<li class="tech_used_li">Python + CherryPy </li>
+			<li class="tech_used_li">PostgreSQL </li>
+			<li class="tech_used_li">jQuery</li>
+			<li class="tech_used_li">Impress.js</b></li>
+		<li id="tech_used_vim">Most Importantly <b>Vim...</b> </li>
+		</ul>
+    </div>
+
+    <div id="javascript_quick" class="step slide" data-x="1000" data-y="-2000">
+		<q>What exactly is <strong>Javascript?</strong></q>
+		<q>Objects are <strong> Prototype </strong> Based</q>
+		<q> <strong> Dynamic </strong> Type System </q>
+		<q> Features <strong> Lambdas </strong> and <strong> Callbacks </strong> </q>
+		<q> <strong> Scheme </strong> Inspired With <strong> C </strong> Syntax </q>
+
+	</div>
+	
+	<div id="nothing_web" class="step" data-x="5000" data-y="0" data-scale="4">
+		<q>Javascript has nothing to do with HTML<span id="nothing_web_sup">*</span> <q>
+		<div id="nothing_web_sub">*HTML is a bad character, best to avoid him </div>
+	</div>
+
+	<div id="dom_quick" class="step slide" data-x="0" data-y="0" data-z="-3000" >
+		<h1> <strong> Document Object Model </strong> </h1>
+		<q> Web Browser Provides API </q>
+		<q> Standardized by W3C </q>
+		<q> HTML Element is an Object </q>
+		<q> Elements have attributes </q>
+	</div>
+
+	<div id="refresher" class="step slide" data-x="0" data-y="0" data-z="-5000" data-rotate="90">
+		<h1> HTML F5'er </h1>
+		<ul>
+			<li class='refresh_point'> <strong> Tag </strong> - used to define elements attributes</li>
+			<li class='refresh_point'> <strong> Id </strong> - uniquely identify an element</li>
+			<li class='refresh_point'> <strong> Class </strong> - identify groups of elements, multiple allowed</li>
+			<li class='refresh_point'> <strong> Span </strong> - holds elements</li>
+			<li class='refresh_point'> <strong> Div </strong> - starts new line, holds elements</li>
+		</ul>
+		<p> &lt;p&nbsp;id='myTxt'&nbsp;class='redBorder'&nbsp;/&gt;&nbsp;&lt;/p&gt;  </p>
+	</div>
+
+	<div id="accessing_dom" class="step slide" data-x="1500" data-y="" data-z="-5000" data-rotate="90">
+		<h1> <strong> Working with the DOM </strong></h1>
+		<div>
+			<h2> Our Element </h2>
+			<p> &lt;p&nbsp;id='myTxt'&nbsp;class='redBorder'&nbsp;/&gt;&nbsp;&lt;/p&gt; </p>
+		</div>
+		<div>	
+			<h2> DOM API </h2>
+			<p> var string = "Hello, World";
+			<p> document.getElementById(&quot;myTxt&quot;).innerHTML=string;  </p> 
+		</div>
+		<div>
+			<h2> jQuery Toolkit </h2>
+			<p> $(&quot;#myTxt&quot;).text(&quot;Hello,&nbsp;World!&quot;); </p>
+		</div>
+	</div>
+
+	<div id="shut_up" class="step" data-x="0" data-y="-10000" data-z="5000" data-scale="5">
+		<p> shut up <br /> and <a href="demo.html"> code! </a> </p>
+	</div>
+   
+</div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
