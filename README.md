@@ -12,7 +12,7 @@ and ways its commonly used
 * Impress.js https://github.com/bartaz/impress.js/
 * jQuery http://jquery.com/
 
-###Liscense
+###License
 Feel free to use this content in any way! You don't have to credit 
 me in any way. I offer no guarantees on  the quality of the content 
 or code.
